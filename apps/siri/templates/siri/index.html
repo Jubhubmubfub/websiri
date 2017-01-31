@@ -3,23 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Web Siri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     {% load staticfiles %}
     <link rel="stylesheet" href={% static 'siri/css/styles.css'%}>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="header">
-        <p>Web Siri App</p>
-        <form action="/" method="post">
-          {%csrf_token%}
-          Email: <input type="text" name="email" value="">
-          Password: <input type="password" name="password" value=""><br>
-          <input type="submit" value="Login">
-        </form>
+
+    <!-- navbar -->
+    <nav>
+      <div class="nav-wrapper deep-purple lighten-2 push-down">
+        <a href="/" class="brand-logo deep-purple-text text-lighten-4"> &nbspWebSiri</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#" class="deep-purple-text text-lighten-4">Login</a></li>
+          <li><a href="#" class="deep-purple-text text-lighten-4">Register</a></li>
+          <li><a href="#" class="deep-purple-text text-lighten-4">About</a></li>
+        </ul>
       </div>
-      <a href='/'><div id='button'>
-        <p>Speak</p>
-      </div></a>
+    </nav>
+    <!-- end nav bar -->
+    <!-- start body -->
+    <div class="body deep-purple lighten-3">
+      <!-- start row -->
+      <div class="row">
+        <!-- button container -->
+        <div class="col s12">
+            <!-- button -->
+            <div class="circle circle-margins deep-purple lighten-2 ">
+              <a href="/">
+                <div class="circle deep-purple-text text-lighten-4">
+                  Speak
+                </div>
+              </a>
+            </div>
+            <!-- end button -->
+        </div>
+        <!-- end button container -->
+      </div>
+      <!-- end row -->
     </div>
+    <!-- end body -->
+
   </body>
 </html>
